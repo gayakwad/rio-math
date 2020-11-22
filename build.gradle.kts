@@ -12,6 +12,7 @@ plugins {
 
     // Apply the java-library plugin for API and implementation separation.
     `java-library`
+    id("com.github.maiflai.scalatest") version "0.29"
 }
 
 repositories {
@@ -31,4 +32,5 @@ dependencies {
 
     // Need scala-xml at test runtime
     testRuntimeOnly("org.scala-lang.modules:scala-xml_2.13:1.2.0")
+    testRuntime ("com.vladsch.flexmark:flexmark-all:0.35.10")
 }
