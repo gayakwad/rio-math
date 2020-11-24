@@ -43,6 +43,7 @@ class ArrangementTest extends org.scalatest.funsuite.AnyFunSuite {
     printAllCombinations(Array(999), "(9", 9)
     printAllCombinations(Array(9, 9), "(99", 99)
     printAllCombinations(Array(9), "(999", 999)
+
   }
 
 }

@@ -22,16 +22,16 @@ object Operations {
     println(x.size)
     println(x.mkString("\n"))
 
-    def print(numbers: Array[Int], str: String, sum: Int): Unit = {
+    def print(numbers: Array[Int], str: String, result: Int): Unit = {
 
       if (numbers.length > 0) {
         for (op <- ops) {
           val (head, tail) = (numbers.head, numbers.drop(1))
-          val (result, str1) = op(sum, head)
-          print(tail, s"$str${str1}${head})", result)
+          val (new_result, str1) = op(result, head)
+          print(tail, s"$str$str1$head)", new_result)
         }
       } else {
-        x += (sum -> (x.getOrElse(sum, List()) :+ str))
+        x += (result -> (x.getOrElse(result, List()) :+ str))
       }
 
     }
